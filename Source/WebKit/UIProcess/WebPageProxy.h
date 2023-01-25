@@ -1646,6 +1646,7 @@ public:
     void dispatchProcessDidTerminate(WebProcessProxy&, ProcessTerminationReason);
     void willChangeProcessIsResponsive();
     void didChangeProcessIsResponsive();
+    void isWebProcessResponsive(CompletionHandler<void (bool isWebProcessResponsive)>&& callback);
 
 #if PLATFORM(IOS_FAMILY)
     void processWillBecomeSuspended();
